@@ -1,0 +1,216 @@
+{
+    "frames": [
+        {
+            "filename": "platformerpack_character_0",
+            "frame": {
+                "x": 0,
+                "y": 0,
+                "w": 96,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "platformerpack_character_1",
+            "frame": {
+                "x": 48,
+                "y": 0,
+                "w": 48,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "platformerpack_character_2",
+            "frame": {
+                "x": 96,
+                "y": 0,
+                "w": 48,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "platformerpack_character_3",
+            "frame": {
+                "x": 144,
+                "y": 0,
+                "w": 48,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "platformerpack_character_4",
+            "frame": {
+                "x": 0,
+                "y": 96,
+                "w": 48,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "platformerpack_character_5",
+            "frame": {
+                "x": 48,
+                "y": 96,
+                "w": 48,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "platformerpack_character_6",
+            "frame": {
+                "x": 96,
+                "y": 96,
+                "w": 48,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "platformerpack_character_7",
+            "frame": {
+                "x": 144,
+                "y": 96,
+                "w": 48,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "platformerpack_character_8",
+            "frame": {
+                "x": 0,
+                "y": 192,
+                "w": 48,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "platformerpack_character_9",
+            "frame": {
+                "x": 48,
+                "y": 192,
+                "w": 48,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "platformerpack_character_10",
+            "frame": {
+                "x": 96,
+                "y": 192,
+                "w": 48,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "platformerpack_character_11",
+            "frame": {
+                "x": 144,
+                "y": 192,
+                "w": 48,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "platformerpack_character_12",
+            "frame": {
+                "x": 0,
+                "y": 288,
+                "w": 48,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "platformerpack_character_13",
+            "frame": {
+                "x": 48,
+                "y": 288,
+                "w": 48,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "platformerpack_character_14",
+            "frame": {
+                "x": 96,
+                "y": 288,
+                "w": 48,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "platformerpack_character_15",
+            "frame": {
+                "x": 144,
+                "y": 288,
+                "w": 48,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        }
+    ],
+    "meta": {
+        "description": "Atlas generado con Atlas Packer Phaser3",
+        "web": "https://gammafp.github.io/atlas-packer-phaser/"
+    }
+}
