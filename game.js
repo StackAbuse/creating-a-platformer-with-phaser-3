@@ -59,20 +59,30 @@ function create() {
   // Tiled indices can only be >= 0, therefore we are colliding with all of
   // the platform layer
   platforms.setCollisionByExclusion(-1, true);
+
   // Get the spikes from the object layer of our Tiled map. The 2nd argument of
   // createFromObjects is the `gid` of the objects, a value given by Tiled. We
   // can get the gid from the exported JSON
-  this.spikes = map.createFromObjects('Spikes', 71, { key: 'spike' }, this);
-  // Move spikes down 200 pixel to match their original positions on the platforms
-  this.spikes.forEach(element => {
+  spikesSprites = map.createFromObjects('Spikes', 71, { key: 'spike' }, this);
+  spikesSprites.forEach(element => {
+    // Move spikes down 200 pixel to match their original positions on the platforms
     element.y += 200;
   });
+
+  // Create a sprite group for all spikes, make it static so objects don't move
+  // via gravity or the player
+  this.spikes = this.physics.add.group({
+    allowGravity: false,
+    immovable: true
+  });
+  this.spikes.addMultiple(spikesSprites);
 
   // Add the player to the game world
   this.player = this.physics.add.sprite(50, 300, 'player');
   this.player.setBounce(0.1); // our player will bounce from items
   this.player.setCollideWorldBounds(true); // don't go out of the map
   this.physics.add.collider(this.player, platforms);
+  this.physics.add.overlap(this.player, this.spikes, playerHit, null, this);
 
   // Enable user input via cursor keys
   this.cursors = this.input.keyboard.createCursorKeys();
@@ -141,4 +151,29 @@ function update() {
     // otherwise, make them face the other side
     this.player.setFlipX(true);
   }
+}
+
+/**
+ * playerHit resets the player's state when it dies from colliding with a spike
+ * @param {*} player - player sprite
+ * @param {*} spike - spike player collided with
+ */
+function playerHit(player, spike) {
+  // Set velocity back to 0
+  player.setVelocity(0, 0);
+  // Put the player back in its original position
+  player.setX(50);
+  player.setY(300);
+  // Use the default `idle` animation
+  player.play('idle', true);
+  // Set the visibility to 0 i.e. hide the player
+  player.setAlpha(0);
+  // Add a tween that 'blinks' until the player is gradually visible
+  let tw = this.tweens.add({
+    targets: player,
+    alpha: 1,
+    duration: 100,
+    ease: 'Linear',
+    repeat: 5,
+  });
 }
