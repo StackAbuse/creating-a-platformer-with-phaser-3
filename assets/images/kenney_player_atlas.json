@@ -1,7 +1,7 @@
 {
     "frames": [
         {
-            "filename": "platformerpack_character_0",
+            "filename": "robo_player_0",
             "frame": {
                 "x": 0,
                 "y": 0,
@@ -14,24 +14,11 @@
             }
         },
         {
-            "filename": "platformerpack_character_1",
-            "frame": {
-                "x": 48,
-                "y": 0,
-                "w": 48,
-                "h": 96
-            },
-            "anchor": {
-                "x": 0.5,
-                "y": 0.5
-            }
-        },
-        {
-            "filename": "platformerpack_character_2",
+            "filename": "robo_player_1",
             "frame": {
                 "x": 96,
                 "y": 0,
-                "w": 48,
+                "w": 96,
                 "h": 96
             },
             "anchor": {
@@ -40,11 +27,11 @@
             }
         },
         {
-            "filename": "platformerpack_character_3",
+            "filename": "robo_player_2",
             "frame": {
-                "x": 144,
+                "x": 192,
                 "y": 0,
-                "w": 48,
+                "w": 96,
                 "h": 96
             },
             "anchor": {
@@ -53,11 +40,24 @@
             }
         },
         {
-            "filename": "platformerpack_character_4",
+            "filename": "robo_player_3",
+            "frame": {
+                "x": 288,
+                "y": 0,
+                "w": 96,
+                "h": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "robo_player_4",
             "frame": {
                 "x": 0,
                 "y": 96,
-                "w": 48,
+                "w": 96,
                 "h": 96
             },
             "anchor": {
@@ -66,24 +66,11 @@
             }
         },
         {
-            "filename": "platformerpack_character_5",
-            "frame": {
-                "x": 48,
-                "y": 96,
-                "w": 48,
-                "h": 96
-            },
-            "anchor": {
-                "x": 0.5,
-                "y": 0.5
-            }
-        },
-        {
-            "filename": "platformerpack_character_6",
+            "filename": "robo_player_5",
             "frame": {
                 "x": 96,
                 "y": 96,
-                "w": 48,
+                "w": 96,
                 "h": 96
             },
             "anchor": {
@@ -92,11 +79,11 @@
             }
         },
         {
-            "filename": "platformerpack_character_7",
+            "filename": "robo_player_6",
             "frame": {
-                "x": 144,
+                "x": 192,
                 "y": 96,
-                "w": 48,
+                "w": 96,
                 "h": 96
             },
             "anchor": {
@@ -105,102 +92,11 @@
             }
         },
         {
-            "filename": "platformerpack_character_8",
+            "filename": "robo_player_7",
             "frame": {
-                "x": 0,
-                "y": 192,
-                "w": 48,
-                "h": 96
-            },
-            "anchor": {
-                "x": 0.5,
-                "y": 0.5
-            }
-        },
-        {
-            "filename": "platformerpack_character_9",
-            "frame": {
-                "x": 48,
-                "y": 192,
-                "w": 48,
-                "h": 96
-            },
-            "anchor": {
-                "x": 0.5,
-                "y": 0.5
-            }
-        },
-        {
-            "filename": "platformerpack_character_10",
-            "frame": {
-                "x": 96,
-                "y": 192,
-                "w": 48,
-                "h": 96
-            },
-            "anchor": {
-                "x": 0.5,
-                "y": 0.5
-            }
-        },
-        {
-            "filename": "platformerpack_character_11",
-            "frame": {
-                "x": 144,
-                "y": 192,
-                "w": 48,
-                "h": 96
-            },
-            "anchor": {
-                "x": 0.5,
-                "y": 0.5
-            }
-        },
-        {
-            "filename": "platformerpack_character_12",
-            "frame": {
-                "x": 0,
-                "y": 288,
-                "w": 48,
-                "h": 96
-            },
-            "anchor": {
-                "x": 0.5,
-                "y": 0.5
-            }
-        },
-        {
-            "filename": "platformerpack_character_13",
-            "frame": {
-                "x": 48,
-                "y": 288,
-                "w": 48,
-                "h": 96
-            },
-            "anchor": {
-                "x": 0.5,
-                "y": 0.5
-            }
-        },
-        {
-            "filename": "platformerpack_character_14",
-            "frame": {
-                "x": 96,
-                "y": 288,
-                "w": 48,
-                "h": 96
-            },
-            "anchor": {
-                "x": 0.5,
-                "y": 0.5
-            }
-        },
-        {
-            "filename": "platformerpack_character_15",
-            "frame": {
-                "x": 144,
-                "y": 288,
-                "w": 48,
+                "x": 288,
+                "y": 96,
+                "w": 96,
                 "h": 96
             },
             "anchor": {
