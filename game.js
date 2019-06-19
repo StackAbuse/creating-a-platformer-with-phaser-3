@@ -16,6 +16,7 @@ const config = {
     default: 'arcade',
     arcade: {
       gravity: { y: 500 },
+      debug: true
     },
   }
 };
@@ -36,6 +37,7 @@ function create() {
   const tileset = map.addTilesetImage('kenney_simple_platformer', 'tiles');
   const backgroundImage = this.add.image(0, 0, 'background').setOrigin(0, 0).setScale(2, 0.8);
   const platforms = map.createStaticLayer('Platforms', tileset, 0, 200);
+  platforms.setCollisionByExclusion(-1, true);
   this.spikes = map.createFromObjects('Spikes', 71, {key: 'spike'}, this);
   // Move spikes down 200 pixel to match their original positions on the platforms
   this.spikes.forEach(element => {
@@ -45,7 +47,8 @@ function create() {
   this.player = this.physics.add.sprite(50, 300, 'player');
   this.player.setBounce(0.1); // our player will bounce from items
   this.player.setCollideWorldBounds(true); // don't go out of the map
-  this.physics.add.collider(platforms, this.player);
+  this.physics.add.collider(this.player, platforms);
+
 }
 
 function update() { }
