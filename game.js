@@ -81,7 +81,7 @@ function create() {
   this.player.setBounce(0.1); // our player will bounce from items
   this.player.setCollideWorldBounds(true); // don't go out of the map
   this.physics.add.collider(this.player, platforms);
-  this.physics.add.overlap(this.player, this.spikes, playerHit, null, this);
+  this.physics.add.collider(this.player, this.spikes, playerHit, null, this);
 
   // Enable user input via cursor keys
   this.cursors = this.input.keyboard.createCursorKeys();
