@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="10" height="6" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="5">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="14" height="6" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="5">
  <tileset firstgid="1" name="kenney_simple_platformer" tilewidth="64" tileheight="64" tilecount="98" columns="14">
   <image source="../tilesets/platformPack_tilesheet.png" width="896" height="448"/>
  </tileset>
- <layer id="2" name="Platforms" width="10" height="6">
+ <layer id="5" name="Platforms" width="14" height="6">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,47,47,47,47,0,0,
-0,0,0,47,0,0,0,0,0,0,
-1,1,1,1,1,1,1,1,1,1,
-4,4,4,4,4,4,4,4,4,4
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,47,47,47,0,0,0,0,0,
+0,0,0,0,0,47,0,0,0,0,0,0,0,0,
+0,0,0,0,47,0,0,0,0,0,0,0,0,0,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+4,4,4,4,4,4,4,4,4,4,4,4,4,4
 </data>
  </layer>
  <objectgroup id="3" name="Spikes">
-  <object id="1" gid="71" x="128" y="256" width="64" height="64"/>
-  <object id="2" gid="71" x="256" y="128" width="64" height="64"/>
-  <object id="3" gid="71" x="544" y="256" width="64" height="64"/>
+  <object id="1" gid="71" x="192" y="256" width="64" height="64"/>
+  <object id="2" gid="71" x="448" y="64" width="64" height="64"/>
+  <object id="3" gid="71" x="672" y="256" width="64" height="64"/>
  </objectgroup>
 </map>
