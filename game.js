@@ -49,7 +49,21 @@ function create() {
   this.player.setCollideWorldBounds(true); // don't go out of the map
   this.physics.add.collider(this.player, platforms);
 
+  this.cursors = this.input.keyboard.createCursorKeys();
 }
 
-function update() { }
+function update() {
+  // Moving left and right
+  this.player.setVelocityX(0);
+  if (this.cursors.left.isDown) {
+    this.player.body.setVelocityX(-200);
+  } else if (this.cursors.right.isDown) {
+    this.player.body.setVelocityX(200);
+  }
+
+  // Jumping
+  if ((this.cursors.space.isDown) && this.player.body.onFloor()) {
+    this.player.body.setVelocityY(-350);
+  }
+}
 
