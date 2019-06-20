@@ -16,7 +16,6 @@ const config = {
     default: 'arcade',
     arcade: {
       gravity: { y: 500 },
-      debug: true,
     },
   }
 };
@@ -47,7 +46,7 @@ function create() {
   // Add the tileset to the map so the images would load correctly in Phaser
   const tileset = map.addTilesetImage('kenney_simple_platformer', 'tiles');
   // Place the background image in our game world
-  const backgroundImage = this.add.image(0, 0, 'background').setOrigin(0, 0)
+  const backgroundImage = this.add.image(0, 0, 'background').setOrigin(0, 0);
   // Scale the image to better match our game's resolution
   backgroundImage.setScale(2, 0.8);
   // Add the platform layer as a static group, the player would be able
@@ -109,13 +108,11 @@ function create() {
   const spikeObjects = map.getObjectLayer('Spikes')['objects'];
   spikeObjects.forEach(spikeObject => {
     // Add new spikes to our sprite group
-    const spike = this.spikes.create(spikeObject.x, spikeObject.y, 'spike').setOrigin(0, 0);
+    const spike = this.spikes.create(spikeObject.x, spikeObject.y + 200 - spikeObject.height, 'spike').setOrigin(0, 0);
     // By default the sprite has loads of whitespace from the base image, we
     // resize the sprite to reduce the amount of whitespace used by the sprite
     // so collisions can be more precise
     spike.body.setSize(spike.width, spike.height - 20).setOffset(0, 20);
-    // Move the sprite downward by roughly 200 pixels
-    spike.setY(spike.y + 200 - spike.height);
   });
 
   // Add collision between the player and the spikes
