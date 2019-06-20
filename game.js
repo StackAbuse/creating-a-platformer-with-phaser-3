@@ -15,7 +15,8 @@ const config = {
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 500 }
+      gravity: { y: 500 },
+      debug: true,
     },
   }
 };
@@ -59,29 +60,11 @@ function create() {
   // the platform layer
   platforms.setCollisionByExclusion(-1, true);
 
-  // Get the spikes from the object layer of our Tiled map. The 2nd argument of
-  // createFromObjects is the `gid` of the objects, a value given by Tiled. We
-  // can get the gid from the exported JSON
-  spikesSprites = map.createFromObjects('Spikes', 71, { key: 'spike' }, this);
-  spikesSprites.forEach(element => {
-    // Move spikes down 200 pixel to match their original positions on the platforms
-    element.y += 200;
-  });
-
-  // Create a sprite group for all spikes, make it static so objects don't move
-  // via gravity or the player
-  this.spikes = this.physics.add.group({
-    allowGravity: false,
-    immovable: true
-  });
-  this.spikes.addMultiple(spikesSprites);
-
   // Add the player to the game world
   this.player = this.physics.add.sprite(50, 300, 'player');
   this.player.setBounce(0.1); // our player will bounce from items
   this.player.setCollideWorldBounds(true); // don't go out of the map
   this.physics.add.collider(this.player, platforms);
-  this.physics.add.collider(this.player, this.spikes, playerHit, null, this);
 
   // Enable user input via cursor keys
   this.cursors = this.input.keyboard.createCursorKeys();
@@ -112,6 +95,31 @@ function create() {
     frames: [{ key: 'player', frame: 'robo_player_1' }],
     frameRate: 10,
   });
+
+  // Create a sprite group for all spikes, set common properties to ensure that
+  // sprites in the group don't move via gravity or by player collisions
+  this.spikes = this.physics.add.group({
+    allowGravity: false,
+    immovable: true
+  });
+
+  // Get the spikes from the object layer of our Tiled map. Phaser has a
+  // createFromObjects function to do so, but it creates sprites automatically
+  // for us. We want to manipulate the sprites a bit before we use them
+  const spikeObjects = map.getObjectLayer('Spikes')['objects'];
+  spikeObjects.forEach(spikeObject => {
+    // Add new spikes to our sprite group
+    const spike = this.spikes.create(spikeObject.x, spikeObject.y, 'spike').setOrigin(0, 0);
+    // By default the sprite has loads of whitespace from the base image, we
+    // resize the sprite to reduce the amount of whitespace used by the sprite
+    // so collisions can be more precise
+    spike.body.setSize(spike.width, spike.height - 20).setOffset(0, 20);
+    // Move the sprite downward by roughly 200 pixels
+    spike.setY(spike.y + 200 - spike.height);
+  });
+
+  // Add collision between the player and the spikes
+  this.physics.add.collider(this.player, this.spikes, playerHit, null, this);
 }
 
 function update() {
