@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="14" height="6" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="5">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="14" height="7" tilewidth="64" tileheight="64" infinite="0" nextlayerid="7" nextobjectid="5">
  <tileset firstgid="1" name="kenney_simple_platformer" tilewidth="64" tileheight="64" tilecount="98" columns="14">
   <image source="../tilesets/platformPack_tilesheet.png" width="896" height="448"/>
  </tileset>
- <layer id="5" name="Platforms" width="14" height="6">
+ <layer id="6" name="Platforms" width="14" height="7">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,47,47,47,0,0,0,0,0,
 0,0,0,0,0,47,0,0,0,0,0,0,0,0,
 0,0,0,0,47,0,0,0,0,0,0,0,0,0,
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+4,4,4,4,4,4,4,4,4,4,4,4,4,4,
 4,4,4,4,4,4,4,4,4,4,4,4,4,4
 </data>
  </layer>
