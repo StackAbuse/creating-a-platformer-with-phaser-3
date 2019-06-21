@@ -25,7 +25,7 @@ const game = new Phaser.Game(config);
 function preload() {
   // Image layers from Tiled can't be exported to Phaser 3 (as yet)
   // So we add the background image separately
-  this.load.image('background', 'assets/images/backgroundEmpty.png');
+  this.load.image('background', 'assets/images/background.png');
   // Load the tileset image file, needed for the map to know what
   // tiles to draw on the screen
   this.load.image('tiles', 'assets/tilesets/platformPack_tilesheet.png');
@@ -65,9 +65,6 @@ function create() {
   this.player.setCollideWorldBounds(true); // don't go out of the map
   this.physics.add.collider(this.player, platforms);
 
-  // Enable user input via cursor keys
-  this.cursors = this.input.keyboard.createCursorKeys();
-
   // Create the walking animation using the last 2 frames of
   // the atlas' first row
   this.anims.create({
@@ -94,6 +91,9 @@ function create() {
     frames: [{ key: 'player', frame: 'robo_player_1' }],
     frameRate: 10,
   });
+
+  // Enable user input via cursor keys
+  this.cursors = this.input.keyboard.createCursorKeys();
 
   // Create a sprite group for all spikes, set common properties to ensure that
   // sprites in the group don't move via gravity or by player collisions
