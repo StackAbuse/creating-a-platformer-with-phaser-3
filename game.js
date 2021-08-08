@@ -105,14 +105,13 @@ function create() {
   // Get the spikes from the object layer of our Tiled map. Phaser has a
   // createFromObjects function to do so, but it creates sprites automatically
   // for us. We want to manipulate the sprites a bit before we use them
-  const spikeObjects = map.getObjectLayer('Spikes')['objects'];
-  spikeObjects.forEach(spikeObject => {
+  map.getObjectLayer('Spikes').objects.forEach((spike) => {
     // Add new spikes to our sprite group
-    const spike = this.spikes.create(spikeObject.x, spikeObject.y + 200 - spikeObject.height, 'spike').setOrigin(0, 0);
+    const spikeSprite = this.spikes.create(spike.x, spike.y + 200 - spike.height, 'spike').setOrigin(0);
     // By default the sprite has loads of whitespace from the base image, we
     // resize the sprite to reduce the amount of whitespace used by the sprite
     // so collisions can be more precise
-    spike.body.setSize(spike.width, spike.height - 20).setOffset(0, 20);
+    spikeSprite.body.setSize(spike.width, spike.height - 20).setOffset(0, 20);
   });
 
   // Add collision between the player and the spikes
